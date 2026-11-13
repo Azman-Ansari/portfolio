@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Azman Ansari Advanced Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Azman Ansari, back to top"><span class="mark">AA</span><span>Azman Ansari</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#fusion">Approach</a>
+      <a href="#work">Projects</a>
+      <a href="#lab" class="keep">ML lab</a>
+      <a href="#skills">Skills</a>
+      <a href="#path">Path</a>
+      <a href="#contact">Contact</a>
+      <button class="tbtn" id="palBtn" type="button" aria-label="Open command palette"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 15l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Search</span><kbd id="kbdHint">Ctrl K</kbd></button>
+      <button class="tbtn" id="themeBtn" type="button" aria-label="Switch light or dark theme" style="margin-left:0"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"/></svg><span>Theme</span></button>
+    </nav>
+  </div>
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow rise">BCA (Hons.) · AI &amp; Data Science · Year 2</p>
+        <h1 class="rise" style="--d:.08s">Azman<br><span class="hl">Ansari</span></h1>
+        <p class="lede rise" style="--d:.18s">I build data and ML products that help <em>traditional businesses</em> sell online, read their numbers and decide faster.</p>
+        <p class="now rise" style="--d:.24s"><span class="mono muted">Now building</span><span><span id="typed">forecasting models</span><span class="caret" aria-hidden="true"></span></span></p>
+        <div class="chips rise" style="--d:.3s">
+          <span class="chip">4 project case studies</span>
+          <span class="chip">4 working demos</span>
+          <span class="chip">Offline + online retail</span>
+        </div>
+        <div class="cta rise" style="--d:.38s">
+          <a class="btn" href="#lab">Open the ML lab <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="#work">Read case studies</a>
+        </div>
+        <p class="tip mono rise" style="--d:.45s">Click or tap anywhere in this section to make a sale.</p>
+      </div>
+      <div class="khata rise" style="--d:.3s" role="img" aria-label="A ledger of sample sales that adds a new counter or online sale every few seconds">
+        <div class="khata-h"><span class="live"></span><span>Khata · sample day</span><span class="date" id="kDate"></span></div>
+        <ol id="kRows"></ol>
+        <div class="khata-f"><span class="muted">Day total</span><strong id="kTotal">₹0</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="tkTrack"></div></div>
+
+  <section id="fusion">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">How I think about business</p>
+        <h2>Where the counter meets the dashboard</h2>
+        <p>A neighbourhood shop already has trust, credit relationships and local knowledge. Going online adds reach, and every sale leaves a record. Data science turns those records into decisions.</p>
+      </div>
+      <div class="fusion">
+        <div class="f-card reveal"><h3><span class="dot" style="background:var(--counter)"></span>Traditional business</h3><p>Face-to-face trust, udhaar (credit) relationships, knowing which customer wants what before they ask.</p></div>
+        <div class="op reveal" aria-hidden="true">+</div>
+        <div class="f-card reveal" style="--d:.08s"><h3><span class="dot" style="background:var(--online)"></span>E-business</h3><p>Orders at any hour, customers beyond the street, digital payments, and a clean data trail for every sale.</p></div>
+        <div class="op reveal" aria-hidden="true">+</div>
+        <div class="f-card reveal" style="--d:.16s"><h3><span class="dot" style="background:var(--ink)"></span>Modern technique</h3><p>Demand forecasting, customer segmentation and automation that turn records into the next stock order.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Projects</p>
+        <h2>Products for business problems</h2>
+        <p>Each project starts from a question a shop owner would ask. Open a card for the problem, approach and what I plan to ship. These are sample cards; replace them with your real work as it ships.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="fbtn" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="fbtn" type="button" data-f="forecasting" aria-pressed="false">Forecasting</button>
+        <button class="fbtn" type="button" data-f="customers" aria-pressed="false">Customers</button>
+        <button class="fbtn" type="button" data-f="pricing" aria-pressed="false">Pricing</button>
+        <button class="fbtn" type="button" data-f="web" aria-pressed="false">Web</button>
+      </div>
+      <div class="grid2" id="projGrid"></div>
+    </div>
+  </section>
+
+  <section id="lab" class="lab">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">ML lab</p>
+        <h2>Four things you can run right here</h2>
+        <p>Everything below runs in your browser with plain JavaScript. The data is generated sample data, so change the controls and watch the model respond.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Lab demos">
+        <button class="tab" role="tab" id="tab-fc" aria-controls="pane-fc" aria-selected="true" data-tab="fc">Demand forecast</button>
+        <button class="tab" role="tab" id="tab-seg" aria-controls="pane-seg" aria-selected="false" tabindex="-1" data-tab="seg">Customer segments</button>
+        <button class="tab" role="tab" id="tab-roi" aria-controls="pane-roi" aria-selected="false" tabindex="-1" data-tab="roi">Go-hybrid calculator</button>
+        <button class="tab" role="tab" id="tab-co" aria-controls="pane-co" aria-selected="false" tabindex="-1" data-tab="co">Shop checkout</button>
+      </div>
+
+      <!-- Forecast -->
+      <div class="panel" role="tabpanel" id="pane-fc" aria-labelledby="tab-fc">
+        <div class="panel-h"><h3>Forecast a product's daily demand</h3>
+          <div class="seg" role="group" aria-label="Model"><button type="button" data-m="ma" aria-pressed="false">7-day average</button><button type="button" data-m="es" aria-pressed="false">Smoothing</button><button type="button" data-m="ts" aria-pressed="true">Trend + weekday</button></div>
+        </div>
+        <div class="ctls">
+          <label class="ctl"><span class="row"><span>Forecast horizon</span><output id="oH">14 days</output></span><input id="fcH" type="range" min="7" max="28" step="1" value="14"></label>
+          <label class="ctl"><span class="row"><span>Noise in sales</span><output id="oN">5</output></span><input id="fcN" type="range" min="0" max="14" step="1" value="5"></label>
+          <label class="chk"><input id="fcF" type="checkbox" checked>Festival spike in history</label>
+        </div>
+        <div class="legend"><span><i style="background:var(--ink)"></i>Actual sales</span><span><i style="background:var(--counter)"></i>Model on last 14 days (backtest)</span><span><i style="background:var(--online)"></i>Forecast ± typical error</span></div>
+        <canvas class="cv" id="cvFc" style="height:340px" role="img" aria-label="Line chart of daily sales with a forecast"></canvas>
+        <p class="note" id="fcSum"></p>
+        <div class="mcards" id="mcards"></div>
+        <p class="insight" id="fcInsight"></p>
+      </div>
+
+      <!-- Segments -->
+      <div class="panel" role="tabpanel" id="pane-seg" aria-labelledby="tab-seg" hidden>
+        <div class="panel-h"><h3>Group customers with k-means</h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm ghost" id="segStep" type="button">Step</button><button class="btn sm" id="segRun" type="button">Run to finish</button><button class="btn sm ghost" id="segNew" type="button">New start</button></div>
+        </div>
+        <div class="ctls"><label class="ctl"><span class="row"><span>Number of segments (k)</span><output id="oK">4</output></span><input id="segK" type="range" min="2" max="5" step="1" value="4"></label></div>
+        <canvas class="cv" id="cvSeg" style="height:360px" role="img" aria-label="Scatter chart of customers by orders per month and basket size, coloured by segment"></canvas>
+        <p class="note" id="segStatus"></p>
+        <div class="scroll"><table><thead><tr><th>Segment</th><th>Customers</th><th>Orders / month</th><th>Avg basket</th><th>Suggested action</th></tr></thead><tbody id="segTbl"></tbody></table></div>
+      </div>
+
+      <!-- ROI -->
+      <div class="panel" role="tabpanel" id="pane-roi" aria-labelledby="tab-roi" hidden>
+        <div class="panel-h"><h3>What if my shop also sold online?</h3><button class="link-btn" id="roiReset" type="button">Reset to defaults</button></div>
+        <div class="roi">
+          <div class="ctls">
+            <label class="ctl"><span class="row"><span>Monthly shop revenue</span><output id="oR0"></output></span><input id="roiR0" type="range" min="50000" max="1000000" step="10000" value="250000"></label>
+            <label class="ctl"><span class="row"><span>New online sales at full ramp</span><output id="oUp"></output></span><input id="roiUp" type="range" min="10" max="100" step="5" value="60"></label>
+            <label class="ctl"><span class="row"><span>Profit margin</span><output id="oMg"></output></span><input id="roiMg" type="range" min="10" max="40" step="1" value="25"></label>
+            <label class="ctl"><span class="row"><span>Delivery and platform cost</span><output id="oCs"></output></span><input id="roiCs" type="range" min="2" max="20" step="1" value="8"></label>
+            <label class="ctl"><span class="row"><span>Ad spend per month</span><output id="oAd"></output></span><input id="roiAd" type="range" min="0" max="30000" step="1000" value="5000"></label>
+            <label class="ctl"><span class="row"><span>One-time setup cost</span><output id="oSt"></output></span><input id="roiSt" type="range" min="0" max="100000" step="5000" value="30000"></label>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+            <div class="tiles">
+              <div class="tile"><span class="k">Payback</span><span class="v" id="tPay">–</span></div>
+              <div class="tile"><span class="k">12-month gain</span><span class="v" id="tGain">–</span></div>
+              <div class="tile"><span class="k">Online share, M12</span><span class="v" id="tShare">–</span></div>
+            </div>
+            <div class="legend"><span><i style="background:var(--counter)"></i>Shop counter</span><span><i style="background:var(--online)"></i>Online</span></div>
+            <canvas class="cv" id="cvRoi1" style="height:210px" role="img" aria-label="Stacked bars of monthly revenue split between counter and online"></canvas>
+            <canvas class="cv" id="cvRoi2" style="height:210px" role="img" aria-label="Line chart of cumulative extra profit from selling online"></canvas>
+          </div>
+        </div>
+        <p class="note">Illustrative model. Online sales ramp up along an S-curve over about 8 months, 20% of online sales come from customers who used to buy at the counter, and gain means extra profit compared with staying offline-only.</p>
+      </div>
+
+      <!-- Checkout -->
+      <div class="panel" role="tabpanel" id="pane-co" aria-labelledby="tab-co" hidden>
+        <div class="panel-h"><h3>Record a counter or online sale</h3>
+          <div class="seg" role="group" aria-label="Sales channel"><button type="button" data-ch="counter" aria-pressed="true">Counter</button><button type="button" data-ch="online" aria-pressed="false">Online</button></div>
+        </div>
+        <div class="co">
+          <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+            <ul class="plist" id="coList"></ul>
+            <div class="cart" aria-live="polite"><div id="coLines"></div><div class="totals" id="coTotals"></div></div>
+            <ol class="steps" id="coSteps" hidden></ol>
+            <div class="pay"><select id="coMethod" aria-label="Payment method"></select><button class="btn" id="coPay" type="button" disabled>Record sale</button></div>
+            <p class="note" id="coRule"></p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+            <div class="tiles">
+              <div class="tile"><span class="k">Revenue</span><span class="v" id="cRev">₹0</span></div>
+              <div class="tile"><span class="k">Orders</span><span class="v" id="cOrd">0</span></div>
+              <div class="tile"><span class="k">Online share</span><span class="v" id="cSh">0%</span></div>
+            </div>
+            <div class="split" aria-hidden="true"><i id="spC" style="background:var(--counter)"></i><i id="spO" style="background:var(--online)"></i></div>
+            <ul class="ledger" id="coLedger" aria-label="Transaction ledger"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Toolkit</p>
+        <h2>Where I am strongest today</h2>
+        <p>Self-assessed on a scale of 1 to 5. Edit the numbers in the script to keep this honest as you grow.</p>
+      </div>
+      <div class="sk-grid">
+        <svg class="radar reveal" id="radar" viewBox="-190 -170 380 340" role="img" aria-label="Radar chart of six skill areas"></svg>
+        <div class="sk-list reveal" style="--d:.08s">
+          <div id="skRows" style="display:flex;flex-direction:column;gap:14px"></div>
+          <div class="groups">
+            <div><h3>Data and ML</h3><div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">scikit-learn</span><span class="tag">Matplotlib</span></div></div>
+            <div><h3>Business side</h3><div class="tags"><span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">KPI design</span><span class="tag">Inventory logic</span><span class="tag">E-commerce basics</span></div></div>
+            <div><h3>Building</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Git</span><span class="tag">Dashboards</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="path">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Path</p>
+        <h2>From classroom to a real shop</h2>
+      </div>
+      <ol class="tl" id="tl">
+        <span class="tl-fill" id="tlFill" aria-hidden="true"></span>
+        <li><span class="when">Foundations</span><b>BCA core</b><span>Programming, mathematics and databases, the base for everything that follows.</span></li>
+        <li><span class="when">Now</span><b>Year 2, BCA (Hons.) AI and Data Science</b><span>Building Python, statistics and SQL skills, and turning them into small working tools like the ones in the lab above.</span></li>
+        <li><span class="when">Next</span><b>Two end-to-end projects</b><span>A stock forecaster and a repeat-customer predictor, each with a usable interface.</span></li>
+        <li><span class="when">Goal</span><b>A product used by a real business</b><span>Put a tool in front of a local shop owner and improve it from how they actually use it.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Have a business problem with data in it?</h2>
+        <p>I am open to internships, collaborations and conversations with shop owners and founders.</p>
+      </div>
+      <div class="cgrid">
+        <div class="reveal">
+          <!-- Replace these placeholder details with your real ones -->
+          <div class="crow"><span class="l">Email</span><span class="v" id="c1">your-email@example.com</span><button class="add" type="button" data-copy="c1">Copy</button></div>
+          <div class="crow"><span class="l">GitHub</span><span class="v" id="c2">github.com/your-username</span><button class="add" type="button" data-copy="c2">Copy</button></div>
+          <div class="crow"><span class="l">LinkedIn</span><span class="v" id="c3">linkedin.com/in/your-name</span><button class="add" type="button" data-copy="c3">Copy</button></div>
+        </div>
+        <div class="reveal" style="--d:.08s">
+          <form id="cf" novalidate>
+            <div class="fld"><label for="cfName">Your name</label><input id="cfName" autocomplete="name"><span class="err" id="eName"></span></div>
+            <div class="fld"><label for="cfMail">Your email</label><input id="cfMail" type="email" autocomplete="email"><span class="err" id="eMail"></span></div>
+            <div class="fld"><label for="cfMsg">What would you like to build?</label><textarea id="cfMsg"></textarea><span class="err" id="eMsg"></span></div>
+            <button class="btn" type="submit" style="align-self:flex-start">Write my message</button>
+          </form>
+          <div class="draft" id="draft" hidden>
+            <pre id="draftTxt"></pre>
+            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn sm" id="draftCopy" type="button">Copy message</button><span class="note">This page cannot send email. Copy the message and send it to the address above.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr"></span> Azman Ansari</span><span>Press <kbd id="kbdHint2">Ctrl K</kbd> to jump anywhere</span></div>
+</footer>
+
+<dialog id="case" aria-labelledby="caseTitle"><div class="dlg" id="caseBody"></div></dialog>
+<dialog id="pal" aria-label="Command palette">
+  <input id="palIn" type="text" placeholder="Jump to a section, demo or case study" role="combobox" aria-expanded="true" aria-controls="palList" autocomplete="off">
+  <ul id="palList" role="listbox"></ul>
+</dialog>
+<dialog id="rcpt" aria-labelledby="rcptTitle"><div class="dlg" id="rcptBody"></div></dialog>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

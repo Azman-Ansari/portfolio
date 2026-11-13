@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Azman Ansari Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Azman Ansari, back to top"><span class="mark">AA</span><span>Azman Ansari</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#fusion">Approach</a>
+      <a href="#work">Projects</a>
+      <a href="#demo" class="keep">Live demo</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="tbtn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"/></svg>
+        <span>Theme</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow rise">BCA (Hons.) · AI &amp; Data Science · Year 2</p>
+        <h1 class="rise" style="--d:.08s">Azman<br><span class="hl">Ansari</span></h1>
+        <p class="lede rise" style="--d:.18s">I build data and ML products that help <em>traditional businesses</em> sell online, read their numbers and decide faster.</p>
+        <div class="chips rise" style="--d:.28s">
+          <span class="chip">Business data problems</span>
+          <span class="chip">Machine learning</span>
+          <span class="chip">Offline + online retail</span>
+        </div>
+        <div class="cta rise" style="--d:.38s">
+          <a class="btn" href="#demo">Try the shop demo <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="#work">See projects</a>
+        </div>
+      </div>
+      <div class="khata rise" style="--d:.3s" role="img" aria-label="A ledger of sample sales that adds a new counter or online sale every few seconds">
+        <div class="khata-h"><span class="live"></span><span>Khata · sample day</span><span class="date" id="kDate"></span></div>
+        <ol id="kRows"></ol>
+        <div class="khata-f"><span class="muted">Day total</span><strong id="kTotal">₹0</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fusion">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">How I think about business</p>
+        <h2>Where the counter meets the dashboard</h2>
+        <p>A neighbourhood shop already has trust, credit relationships and local knowledge. Going online adds reach, and every sale leaves a record. Data science turns those records into decisions.</p>
+      </div>
+      <div class="fusion">
+        <div class="f-card reveal">
+          <h3><span class="dot" style="background:var(--counter)"></span>Traditional business</h3>
+          <p>Face-to-face trust, udhaar (credit) relationships, knowing which customer wants what before they ask.</p>
+        </div>
+        <div class="op reveal" aria-hidden="true">+</div>
+        <div class="f-card reveal" style="--d:.08s">
+          <h3><span class="dot" style="background:var(--online)"></span>E-business</h3>
+          <p>Orders at any hour, customers beyond the street, digital payments, and a clean data trail for every sale.</p>
+        </div>
+        <div class="op reveal" aria-hidden="true">+</div>
+        <div class="f-card reveal" style="--d:.16s">
+          <h3><span class="dot" style="background:var(--ink)"></span>Modern technique</h3>
+          <p>Demand forecasting, customer segmentation and automation that turn records into the next stock order.</p>
+        </div>
+      </div>
+      <div class="f-result reveal">
+        <strong>The products I want to build live in the overlap.</strong>
+        <span class="muted">Small tools a shop owner can trust, backed by models that explain themselves.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Projects</p>
+        <h2>Products for business problems</h2>
+        <p>Each project starts from a question a shop owner would ask. These are sample project cards for the demo; replace them with your real work as it ships.</p>
+      </div>
+      <div class="grid2">
+        <article class="proj reveal">
+          <div class="proj-top"><span class="pill counter">Counter + Online</span><span class="status">Live demo below</span></div>
+          <h3>Hybrid Sales Books</h3>
+          <p>One ledger for walk-in and online orders, with GST, delivery rules, stock cover and reorder alerts calculated as each sale is recorded.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <a class="more" href="#demo">Open the demo ↓</a>
+        </article>
+        <article class="proj reveal" style="--d:.06s">
+          <div class="proj-top"><span class="pill online">Forecasting</span><span class="status">Concept</span></div>
+          <h3>Kirana Stock Forecaster</h3>
+          <p>Predicts weekly demand per item from past sales, festivals and weather, then suggests how much to reorder so shelves do not run empty.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Time series</span></div>
+        </article>
+        <article class="proj reveal">
+          <div class="proj-top"><span class="pill counter">Customers</span><span class="status">Concept</span></div>
+          <h3>Repeat Customer Radar</h3>
+          <p>Finds regular customers who have gone quiet and drafts a WhatsApp reminder with an offer they are likely to use.</p>
+          <div class="tags"><span class="tag">scikit-learn</span><span class="tag">Segmentation</span><span class="tag">SQL</span></div>
+        </article>
+        <article class="proj reveal" style="--d:.06s">
+          <div class="proj-top"><span class="pill online">Pricing</span><span class="status">Concept</span></div>
+          <h3>Festival Price Advisor</h3>
+          <p>Shows how demand moves around Diwali and Eid, and suggests price and bundle changes that protect margin without losing regulars.</p>
+          <div class="tags"><span class="tag">Regression</span><span class="tag">Dashboards</span><span class="tag">Excel</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="demo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Live demo</p>
+        <h2>Run a sale through the shop</h2>
+        <p>Pick a channel, add items and record the sale. Stock, revenue, the ledger and the reorder forecast all update. Everything here is sample data and resets when you reload.</p>
+      </div>
+      <div class="demo-grid">
+        <div class="panel reveal" id="sell">
+          <div class="panel-h">
+            <h3>Sell</h3>
+            <div class="seg" role="group" aria-label="Sales channel">
+              <button type="button" data-channel="counter" aria-pressed="true">Counter</button>
+              <button type="button" data-channel="online" aria-pressed="false">Online</button>
+            </div>
+          </div>
+          <ul class="plist" id="plist"></ul>
+          <div class="cart" aria-live="polite">
+            <div id="cartLines"></div>
+            <div class="totals" id="totals"></div>
+          </div>
+          <ol class="steps" id="steps" hidden></ol>
+          <div class="pay">
+            <select id="method" aria-label="Payment method"></select>
+            <button class="btn" id="payBtn" type="button" disabled>Record sale</button>
+          </div>
+          <p class="note" id="rule"></p>
+        </div>
+
+        <div class="panel reveal" id="books" style="--d:.08s">
+          <h3>Books</h3>
+          <div class="tiles">
+            <div class="tile"><span class="k">Revenue</span><span class="v" id="sRev">₹0</span></div>
+            <div class="tile"><span class="k">Orders</span><span class="v" id="sOrd">0</span></div>
+            <div class="tile"><span class="k">Avg order</span><span class="v" id="sAov">₹0</span></div>
+          </div>
+          <div>
+            <div class="split" aria-hidden="true"><i id="spC" style="background:var(--counter)"></i><i id="spO" style="background:var(--online)"></i></div>
+            <div class="legend" style="margin-top:8px">
+              <span>Counter <b id="lgC">₹0</b></span>
+              <span>Online <b id="lgO">₹0</b></span>
+              <span>Online share <b id="lgS">0%</b></span>
+            </div>
+          </div>
+          <div class="scroll">
+            <table>
+              <thead><tr><th>Item</th><th>7 days</th><th>Forecast</th><th>Stock cover</th><th>Status</th></tr></thead>
+              <tbody id="fc"></tbody>
+            </table>
+          </div>
+          <p class="note">Forecast is an exponentially weighted average of daily sales (recent days count more). Reorder suggests one week of cover.</p>
+          <ul class="ledger" id="ledger" aria-label="Transaction ledger"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Toolkit</p>
+        <h2>Data, business and build skills</h2>
+        <p>The stack I use to take a problem from a spreadsheet to a working tool.</p>
+      </div>
+      <div class="skills">
+        <div class="sk reveal">
+          <h3>Data and ML</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">Statistics</span></div>
+        </div>
+        <div class="sk reveal" style="--d:.07s">
+          <h3>Business side</h3>
+          <div class="tags"><span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">KPI design</span><span class="tag">Inventory logic</span><span class="tag">E-commerce basics</span><span class="tag">Pricing</span></div>
+        </div>
+        <div class="sk reveal" style="--d:.14s">
+          <h3>Building</h3>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Git</span><span class="tag">Dashboards</span></div>
+        </div>
+      </div>
+      <ol class="path">
+        <li class="reveal"><b>Now</b><span>Second year of BCA (Hons.) in AI and Data Science, building the foundations in Python, statistics and databases.</span></li>
+        <li class="reveal"><b>Next</b><span>Ship two end-to-end projects: a stock forecaster and a customer reorder predictor, each with a working interface.</span></li>
+        <li class="reveal"><b>Goal</b><span>Put a product in front of a real local business and learn from how they use it.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Have a business problem with data in it?</h2>
+        <p>I am open to internships, collaborations and conversations with shop owners and founders.</p>
+      </div>
+      <div class="contact reveal">
+        <!-- Replace these placeholder details with your real ones -->
+        <div class="crow"><span class="l">Email</span><span class="v" id="c1">your-email@example.com</span><button class="add" type="button" data-copy="c1">Copy</button></div>
+        <div class="crow"><span class="l">GitHub</span><span class="v" id="c2">github.com/your-username</span><button class="add" type="button" data-copy="c2">Copy</button></div>
+        <div class="crow"><span class="l">LinkedIn</span><span class="v" id="c3">linkedin.com/in/your-name</span><button class="add" type="button" data-copy="c3">Copy</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr"></span> Azman Ansari</span><span class="mono">Built with HTML, CSS and JavaScript</span></div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
