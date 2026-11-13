@@ -44,4 +44,4 @@ All demo data (sales, customers, stock) is sample data generated in the browser.
 
 ## Put it online
 
-Upload the folder to GitHub Pages, Netlify or Vercel as a static site. Point the site at `advanced/` to make that version your home page, or move its files to the root of your repository.
+The advanced version deploys to GitHub Pages from `azman-portfolio/advanced/` whenever `main` is updated. Set the repository's Pages source to **GitHub Actions** in Settings → Pages. The deployment workflow is `.github/workflows/deploy-pages.yml`.
